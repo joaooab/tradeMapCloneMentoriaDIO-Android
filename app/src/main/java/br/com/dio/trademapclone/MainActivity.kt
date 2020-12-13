@@ -6,6 +6,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,30 @@ class MainActivity : AppCompatActivity() {
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            toolbar.setNavigationOnClickListener {
+                val popped = navController.popBackStack()
+                if (!popped) {
+                    finish()
+                }
+            }
+            when (destination.id) {
+                R.id.loginFragment -> {
+                    esconderActionBar()
+                }
+                else -> {
+                    mostrarActionBar()
+                }
+            }
+        }
+    }
+
+    fun esconderActionBar() {
+        supportActionBar?.hide()
+    }
+
+    fun mostrarActionBar() {
+        supportActionBar?.show()
     }
 
     override fun onSupportNavigateUp(): Boolean {
