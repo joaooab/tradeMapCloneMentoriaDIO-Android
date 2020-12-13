@@ -12,9 +12,27 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
+    private val viewModel: LoginViewModel by viewModel()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as MainActivity).toolbar.visibility = View.GONE
+        observaUsuario()
+        configuraBotaoLogin()
+    }
+
+    private fun configuraBotaoLogin() {
+        button.setOnClickListener {
+            val usuario = textInputLayout.editText?.text.toString()
+            viewModel.login(usuario)
+        }
+    }
+
+    private fun observaUsuario() {
+        viewModel.usuario.observe(viewLifecycleOwner, {
+            (activity as MainActivity).toolbar.visibility = View.VISIBLE
+            val direcao = LoginFragmentDirections.actionLoginFragmentToFirstFragment()
+            findNavController().navigate(direcao)
+        })
     }
 
 }
