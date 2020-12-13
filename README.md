@@ -1,4 +1,4 @@
-# tradeMapCloneDIO-Android
+# TradeMapClone mentoria DIO
 
 APP que simula atualização da bolsa de valores em tempo real para mentoria de Android + Jetpack com Kotlin da Digital Inovation One (https://digitalinnovation.one/).
 
