@@ -7,4 +7,15 @@ O app segue a arquitetura MVVM e apresenta as seguintes tecnologias:
     MQTT;
     Retrofit2;
     ViewModel;
-    LiveData;https://github.com/joaooab/tradeMapCloneDIO-Android/blob/master/trademapdetalhes.jpg
+    LiveData;
+    Courotines;
+    Koin;
+    Navigation;
+    Room.
+
+A API utilizada está no repositório: https://github.com/cicerojmm/tradeMapCloneMentoriaDIO
+
+| | | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="login" src="https://github.com/joaooab/tradeMapCloneDIO-Android/blob/master/trademaplogin.jpg"> | <img width="1604" alt="lista" src="https://github.com/joaooab/tradeMapCloneDIO-Android/blob/master/trademaplista.jpg">|<img width="1604" alt="detalhes" src="https://github.com/joaooab/tradeMapCloneDIO-Android/blob/master/trademapdetalhes.jpg"> |
+
