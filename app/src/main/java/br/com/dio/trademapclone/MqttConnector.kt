@@ -46,7 +46,7 @@ class ConectorMqtt {
         runCatching {
             val connOpts = criarConfiguracaoConexao()
             mqttClient.connect(connOpts)
-            mqttClient.subscribe("acao/b3/dados", 0)
+            mqttClient.subscribe("acao.b3.dados", 2)
             Log.i("ConectorMqtt", "conectou!!")
         }.onFailure {
             Log.i("ConectorMqtt", "não conectou ${it.message.orEmpty()}")
