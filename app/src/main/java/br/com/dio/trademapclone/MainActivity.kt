@@ -8,14 +8,18 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
+
+    private val mainViewModel: MainViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
         setupNavController()
+        mainViewModel.consumirAcoes()
     }
 
     private fun setupNavController() {
@@ -54,6 +58,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return NavHostFragment.findNavController(nav_host_fragment).navigateUp()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mainViewModel.pararCosumirAcoes()
     }
 
 }
