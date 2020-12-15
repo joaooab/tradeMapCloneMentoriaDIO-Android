@@ -15,7 +15,7 @@ O app segue a arquitetura MVVM e apresenta as seguintes tecnologias:
 
 A API utilizada está no repositório: https://github.com/cicerojmm/tradeMapCloneMentoriaDIO
 
-OBS: O app está utilizando o style Theme.MaterialComponents.DayNight.DarkActionBar, esse style se adapta conforme as configurações do seu aparelho, ou seja, se o aparelho estiver usando um tema dark (escuro) o app ajustará o seu layout para atender o tema, o mesmo ocorre com os temas light (claro).
+**OBS:** O app está utilizando o style **DayNight**, esse style se adapta conforme as configurações do seu aparelho, ou seja, se o aparelho estiver usando um tema dark (escuro) o app ajustará o seu layout para atender o tema, o mesmo ocorre com os temas light (claro).
 
 | | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
